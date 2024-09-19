@@ -7,8 +7,7 @@ function moveBee() {
     bee.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
     bee.style.transition = "transform 1s";
 }
-
-setInterval(moveBee, 1000);
+setInterval(moveBee, 100);
 function moveBee() {
     var bee = document.getElementById("bee");
     var maxX = window.innerWidth - bee.clientWidth;
