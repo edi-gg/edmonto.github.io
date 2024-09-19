@@ -2,8 +2,14 @@ function moveBee() {
     var bee = document.getElementById("bee");
     var maxX = window.innerWidth * .9 - bee.clientWidth;
     var maxY = window.innerHeight * .9 - bee.clientHeight;
-    var randomX = Math.floor(Math.random() * Math.min(maxX, 50));
-    var randomY = Math.floor(Math.random() * Math.min(maxY, 50));
+    if (maxX < 0) {
+        maxX = 0;
+    }
+    if (maxY < 0) {
+        maxY = 0;
+    }
+    var randomX = Math.floor(Math.random() * Math.min(maxX, 10));
+    var randomY = Math.floor(Math.random() * Math.min(maxY, 10));
     bee.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
     bee.style.transition = "transform 1s";
 }
